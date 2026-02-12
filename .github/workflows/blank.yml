@@ -20,9 +20,9 @@ jobs:
     - name: Prepare the environment
       run: |
         sudo apt update
-        sudo apt -y install python3 python3-pip cpio wget git
+        sudo apt -y install python3 python3-pip cpio wget git aria2
         pip install --upgrade pip
-        pip install twrpdtgen --upgrade
+        pip install git+https://github.com/twrpdtgen/twrpdtgen.git
         mkdir -p dt
       
     - name: Download boot or recovery img
